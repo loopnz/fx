@@ -1,0 +1,8 @@
+.head{
+		color: red;
+	}
+.img{
+	width:100px;
+	height: 100px;
+	background: url(../img/1.jpg)no-repeat;
+}

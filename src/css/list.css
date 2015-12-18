@@ -1,0 +1,8 @@
+.list-head{
+		color: red;
+	}
+.list-img{
+	width:100px;
+	height: 100px;
+	background: url(../img/1.png)no-repeat;
+}
