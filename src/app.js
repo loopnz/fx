@@ -3,7 +3,7 @@ Vue.config.debug = true;
 var VueRouter = require('vue-router')
 Vue.use(VueRouter);
 
-var app =require('./index.js');
+var app =require('./app.vue');
 
 var router = new VueRouter({
     hashbang: true 
@@ -12,18 +12,18 @@ var router = new VueRouter({
 router.map({
     '/home': {
         component: function(resolve){
-            require(['./views/home.js'],resolve);
+            require(['./views/home.vue'],resolve);
         }
     },
     '/category':{
         component:function(resolve){
-          require(['./views/category.js'], resolve)
+          require(['./views/category.vue'], resolve);
         },
         needWX:true
     },
     'list':{
       component:function(resolve){
-         require(['./views/list.js'], resolve)
+         require(['./views/list.vue'], resolve);
       }
     }
 })

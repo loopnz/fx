@@ -17,16 +17,21 @@ module.exports={
     },
     module:{
         loaders:[
-            {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style', 'css?minimize')
-            },
+        	{
+        		test:/\.vue$/,
+        		loader:'vue'
+        	},
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loader: 'url?limit=10000&name=img/[hash:8].[name].[ext]'
             }
         ]
     },
+     vue: {
+	    loaders: {
+	      css: ExtractTextPlugin.extract("css")
+	    }
+  	},
     plugins:[
         new ExtractTextPlugin('[name].css'),
         new HtmlWebpackPlugin({
